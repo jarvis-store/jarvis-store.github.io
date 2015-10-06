@@ -1,6 +1,6 @@
 // Opt-in repos (case sensitive)
 // - These are all children of master account
-/*var optInRepos = [
+var optInRepos = [
   'dashing',
   'active_merchant',
   'liquid',
@@ -44,7 +44,7 @@
   'goluago',
   'shipit-engine'
 ]
-*/
+
 
 // Add custom repos by full_name. Take the org/user and repo name
 // - e.g. batmanjs/batman from https://github.com/batmanjs/batman

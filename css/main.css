@@ -1770,7 +1770,6 @@ a {
     border: 0; }
 
 .filter-bar {
-  background: url(/images/git-back.png) repeat;
   border: 3px solid #ccc;
   font-size: 12px;
   font-weight: 600;
@@ -1981,7 +1980,6 @@ a {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/images/hero-lines.png);
   background-position: center top;
   background-repeat: repeat-x; }
   @media (min-width: 481px) {
