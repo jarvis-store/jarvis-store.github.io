@@ -1,7 +1,7 @@
 // Opt-in repos (case sensitive)
 // - These are all children of master account
 var optInRepos = [
-  //'dashing',
+  'jarvis-store.github.io',
 ]
 
 
