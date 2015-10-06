@@ -27,6 +27,7 @@ var customRepos = [
   'jarvis-theme/tender',
   'jarvis-theme/cupcake',
   'jarvis-theme/glammy',
+  'yusidabcs/rajaongkir',
 
 
 ]
@@ -51,6 +52,7 @@ var customRepoLanguage = {
   'tender':'template',
   'cupcake':'template',
   'glammy':'template',
+  'rajaongkir':'laravel',
 }
 
 // Custom repo avatars. Dimensions should be 40x40

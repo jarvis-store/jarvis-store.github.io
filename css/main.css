@@ -1329,7 +1329,7 @@ a {
     width: 26px; }
 
 .repo-header {
-  border-bottom: 3px solid #207ed5; }
+  border-bottom: 3px solid #ccc; }
   .repo-header:after {
     content: "";
     display: table;
