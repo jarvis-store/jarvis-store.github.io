@@ -1,8 +1,8 @@
 // Opt-in repos (case sensitive)
 // - These are all children of master account
 var optInRepos = [
-  'dashing',
-  'active_merchant',
+  //'dashing',
+  //'active_merchant',
 ]
 
 
