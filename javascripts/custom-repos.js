@@ -7,7 +7,6 @@ var optInRepos = [
 
 
 // Add custom repos by full_name. Take the org/user and repo name
-// - e.g. batmanjs/batman from https://github.com/batmanjs/batman
 var customRepos = [
   'jarvis-theme/playbook',
   'jarvis-theme/babyclothes',
@@ -56,5 +55,5 @@ var customRepoLanguage = {
 
 // Custom repo avatars. Dimensions should be 40x40
 var customRepoAvatar = {
-  //'batman': '/images/repo-avatars/batmanjs.gif'
+  
 }
