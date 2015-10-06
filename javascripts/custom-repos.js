@@ -1,7 +1,48 @@
 // Opt-in repos (case sensitive)
 // - These are all children of master account
 var optInRepos = [
-  'jarvis-store.github.io',
+  'dashing',
+  'active_merchant',
+  'liquid',
+  'superdb',
+  'active_shipping',
+  'shopify_app',
+  'identity_cache',
+  'skeleton-theme',
+  'statsd-instrument',
+  'shopify_theme',
+  'shopify_api',
+  'sarama',
+  'Timber',
+  'shopify-css-import',
+  'active_fulfillment',
+  'shopify_python_api',
+  'wolverine',
+  'verdict',
+  'shopify_django_app',
+  'browser_sniffer',
+  'active_utils',
+  'embedded-app-example',
+  'connect-googleapps',
+  'omniauth-shopify-oauth2',
+  'shopify-fulfillment-integration',
+  'sysv_mq',
+  'money',
+  'sync_app_demo',
+  'rails_parallel',
+  'dukpt',
+  'splunk-auth-proxy',
+  'magnet',
+  'goreferrer',
+  'asset_cloud',
+  'minesweeper',
+  'toxiproxy',
+  'toxiproxy-ruby',
+  'grizzly_ber',
+  'semian',
+  'go-lua',
+  'goluago',
+  'shipit-engine'
 ]
 
 
@@ -26,7 +67,8 @@ var customRepos = [
   'jarvis-theme/tender',
   'jarvis-theme/cupcake',
   'jarvis-theme/glammy',
-  'yusidabcs/rajaongkir'
+
+
 ]
 
 // Custom repo language, different than that defined by GitHub
@@ -49,7 +91,6 @@ var customRepoLanguage = {
   'tender':'template',
   'cupcake':'template',
   'glammy':'template',
-  'rajaongkir':'laravel'
 }
 
 // Custom repo avatars. Dimensions should be 40x40
