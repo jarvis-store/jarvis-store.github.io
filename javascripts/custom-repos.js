@@ -1,7 +1,48 @@
 // Opt-in repos (case sensitive)
 // - These are all children of master account
 var optInRepos = [
-  //'dashing',
+  'dashing',
+  'active_merchant',
+  'liquid',
+  'superdb',
+  'active_shipping',
+  'shopify_app',
+  'identity_cache',
+  'skeleton-theme',
+  'statsd-instrument',
+  'shopify_theme',
+  'shopify_api',
+  'sarama',
+  'Timber',
+  'shopify-css-import',
+  'active_fulfillment',
+  'shopify_python_api',
+  'wolverine',
+  'verdict',
+  'shopify_django_app',
+  'browser_sniffer',
+  'active_utils',
+  'embedded-app-example',
+  'connect-googleapps',
+  'omniauth-shopify-oauth2',
+  'shopify-fulfillment-integration',
+  'sysv_mq',
+  'money',
+  'sync_app_demo',
+  'rails_parallel',
+  'dukpt',
+  'splunk-auth-proxy',
+  'magnet',
+  'goreferrer',
+  'asset_cloud',
+  'minesweeper',
+  'toxiproxy',
+  'toxiproxy-ruby',
+  'grizzly_ber',
+  'semian',
+  'go-lua',
+  'goluago',
+  'shipit-engine'
 ]
 
 
@@ -26,6 +67,7 @@ var customRepos = [
   'jarvis-theme/tender',
   'jarvis-theme/cupcake',
   'jarvis-theme/glammy',
+
 
 ]
 
@@ -52,6 +94,7 @@ var customRepoLanguage = {
 }
 
 // Custom repo avatars. Dimensions should be 40x40
+// - Be sure a custom repo doesn't have the same name as a Shopify one, or a one will be overridden
 var customRepoAvatar = {
-  //'batman': '/images/repo-avatars/batmanjs.gif'
+  'batman': '/images/repo-avatars/batmanjs.gif'
 }
