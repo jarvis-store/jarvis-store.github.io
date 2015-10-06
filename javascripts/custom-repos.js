@@ -2,7 +2,7 @@
 // - These are all children of master account
 var optInRepos = [
   //'dashing',
-  //'active_merchant',
+  'jarvis-store.github.io',
 ]
 
 
