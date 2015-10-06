@@ -26,8 +26,6 @@ var customRepos = [
   'jarvis-theme/tender',
   'jarvis-theme/cupcake',
   'jarvis-theme/glammy',
-
-
 ]
 
 // Custom repo language, different than that defined by GitHub

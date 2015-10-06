@@ -55,7 +55,7 @@ jQuery(function($){
 
         if (this.$preventApiCalls) return false;
 
-        var uri = 'https://api.github.com/orgs/Shopify/members?callback=?'
+        var uri = 'https://api.github.com/orgs/jarvis-store/members?callback=?'
                 + '&per_page='+perPage
                 + '&page='+page;
 
