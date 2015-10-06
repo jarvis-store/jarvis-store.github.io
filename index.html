@@ -1,52 +1,231 @@
-<!DOCTYPE HTML>
-<!--
-	Aerial by HTML5 UP
-	html5up.net | @n33co
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>GogoJarvis ComingSoon</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
-	</head>
-	<body class="loading">
-		<div id="wrapper">
-			<div id="bg"></div>
-			<div id="overlay"></div>
-			<div id="main">
+<!doctype html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 no-js"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+  <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-				<!-- Header -->
-					<header id="header">
-						<h1>Coming Soon</h1>
-						<p>Brace yourself, we are coming!</p>
-						<nav>
-							<ul>
-								<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-								<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-								<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
-								<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
-								<li><a href="#" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
-							</ul>
-						</nav>
-					</header>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<span class="copyright">&copy; 2015 gogojarvis.com</span>
-					</footer>
+  <title>Open Source Material - Jarvis Store</title>
 
-			</div>
-		</div>
-		<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-		<script>
-			window.onload = function() { document.body.className = ''; }
-			window.ontouchmove = function() { return false; }
-			window.onorientationchange = function() { document.body.scrollTop = 0; }
-		</script>
-	</body>
+
+
+  <meta name="description" content="Bahan pembelajaran jarvis Store untuk software developer dan designer">
+
+
+<link rel="canonical" href="http://jarvis-store.github.io">
+
+<meta name="robots" content="index, follow">
+<meta name="st:robots" content="index, follow">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property='st:title' content="Open Source Material - Jarvis Store">
+
+<link rel="shortcut icon" href="http://jarvis-store.com/favicon.png" type="image/x-icon">
+
+<link href="css/main.css" rel="stylesheet" type="text/css">
+<!--[if lt IE 9]>
+  <link href="css/ie.css" rel="stylesheet" type="text/css">
+<![endif]-->
+
+<!--[if IE]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600,300' rel='stylesheet' type='text/css'>
+  </head>
+    <body>
+
+    <div class="hero">
+  <div class="hero-lines"></div>
+  <header class="hero-header">
+    <div class="pagewidth">
+      <div class="logo--ie">
+        <img src="http://cdn2.jarvis-store.com/frontend/assets/images/logo.png" alt="Shopify Open Source" class="logo">
+      </div>
+      <ul class="inline-list git-stats">
+        <li>
+          <span id="countRepos" class="git-stat is-loading"></span> Repositori
+        </li>
+      </ul>
+    </div>
+  </header>
+  <div class="pagewidth">
+    <div class="hero-inner">
+      <h1 class="hero-text">Open Source dari Jarvis Store untuk kamu developer dan desainer yang super keren</h1>
+      <p>Semua repositori berlisensi <a href="https://github.com/Shopify/shopify.github.com/blob/master/LICENSE.md">MIT </a></p>
+    </div>
+  </div>
+</div>
+
+<div class="pagewidth">
+  <div class="filter-bar">
+    <div class="button-group js-radio-button-group" id="filters">
+      <div class="filter-bar--left">
+        Kategori
+      </div>
+      <div class="filter-bar--right">
+        <button class="btn is-active" data-filter="*">Semua</button>
+        <button class="btn" data-filter=".php">PHP</button>
+        <button class="btn" data-filter=".javascript">JavaScript</button>
+        <button class="btn" data-filter=".css">CSS</button>
+        <button class="btn" data-filter=".template">Template</button>
+        <button class="btn" data-filter=".plugin">Plugin</button>
+        <button class="btn" data-filter=":not(.php, .javascript, .css, .template, .plugin)">Lainnya</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="repoWrap">
+  <div class="pagewidth">
+    <div id="repos"></div>
+    <div class="repo-loader">
+      <div class="repo-loader--inner">
+        <div class="spinner spinner-large"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script id="repoTemplate" type="text/template">
+
+  {{#items}}
+  <div class="repo {{languageClass}}{{#unless description}} no-desc{{/unless}}">
+    <header class="repo-header">
+      <div class="grid">
+        <div class="grid-item large--one-half">
+          <h2>
+          {{#if homepage}}
+            {{#if avatar}}
+              <a href="{{homepage}}" class="homepage-link">
+                <img src="{{avatar}}" alt="{{name}}">
+              </a>
+            {{else}}
+              <a href="{{homepage}}" class="homepage-link">
+                <i class="icon-world"></i>
+              </a>
+            {{/if}}
+            <a href="{{homepage}}" title="View {{name}} on Github">{{name}}</a>
+          {{else}}
+            {{#if avatar}}
+              <img src="{{avatar}}" class="homepage-link" alt="{{name}}">
+            {{/if}}
+            <a href="{{url}}" title="View {{name}} on Github">{{name}}</a>
+          {{/if}}
+          </h2>
+        </div>
+        <div class="grid-item large--one-half">
+          <div class="repo-meta">
+            <div class="repo-git">
+              <a href="{{url}}" title="View {{name}} on GitHub">
+                <i class="icon-github" title="View on GitHub"></i> Repo
+              </a>
+            </div>
+            <div class="repo-stats">
+              <i class="icon-star" title="Stars"></i> {{stars}}
+              <i class="icon-forks" title="Forks"></i> {{forks}}
+              <span class="repo-lang">{{language}}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    {{#if description}}
+    <p>{{description}}</p>
+    {{/if}}
+  </div>
+  {{/items}}
+
+</script>
+
+<script>
+  var repos = null;
+</script>
+
+
+
+    <div class="hero-header">
+  <div class="pagewidth grid">
+    <div class="grid-item xlarge--one-half xlarge--text-center">
+      <h2>Bergabung Jarvis Store</h2>
+      <p>
+        Kami mencari marketer, developer dan desainer yang memiliki passion dalam industri ecommerce dan visi memajukan UKM Indonesia bersama Jarvis Store.
+      </p>
+      <p>
+        <a href="https://www.jarvis-store.com/karir" class="btn is-active">Gabung kami!</a>
+      </p>
+    </div>
+    <div class="grid-item xlarge--one-half xlarge--text-center developer-community">
+      <h2>Desainer Template</h2>
+      <p>
+        Ingin membuat template untuk dijual di template store jarvis? Kami bayar per-desain / menjadi template berbayar (pendapatan setiap ada pembeli template)
+      </p>
+      <p>
+        <a href="mailto:info@jarvis-store.com">Email kami!</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+
+    <footer class="footer pagewidth">
+
+  <div class="grid">
+    <div class="grid-item xlarge--one-third xlarge--text-left">
+      Powered by <a href="http://jarvis-store.com">Jarvis Store</a> © 2015
+    </div>
+    <div class="grid-item xlarge--one-third">
+      <a href="https://twitter.com/jarvis_store" class="twitter-link"><span class="under">Follow us</span> <i class="icon-twitter"></i></a>
+    </div>
+    <div class="grid-item xlarge--one-third xlarge--text-right">
+      Ingin ikut berkontribusi? <a href="http://www.jarvis-store.com/karir">Gabung Jarvis Store</a>
+    </div>
+  </div>
+
+</footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="javascripts/libs/modernizr.min.js"></script>
+    <script src="javascripts/libs/handlebars.min.js"></script>
+    <script src="javascripts/libs/isotope.min.js"></script>
+    <script src="javascripts/custom-repos.js"></script>
+    <script src="javascripts/shopify-opensource.js"></script>
+
+    <script type="text/javascript" src="//visitors.shopify.com/track.js?v=2"></script>
+    <script type="text/javascript">_visit.tag('open source');</script>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-49178120-1']);
+      _gaq.push(['_setCustomVar', 5, 'token', _visit.multitrackToken(), 1]);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','_gaUTracker');
+
+      _gaUTracker('create', 'UA-82702-49', {
+        clientId: _visit.multitrackToken(),
+        cookieDomain: 'shopify.com',
+        legacyCookieDomain: 'shopify.com'
+      });
+      _gaUTracker('send', 'pageview');
+    </script>
+
+    </body>
 </html>
