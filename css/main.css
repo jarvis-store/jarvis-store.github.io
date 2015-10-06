@@ -1301,7 +1301,7 @@ a {
     color: #b6d9f9; }
 
 .repo {
-  border: 3px solid #539fea;
+  border: 3px solid #ccc;
   margin-bottom: 15px;
   width: 100%;
   -webkit-transform: translateZ(0);
