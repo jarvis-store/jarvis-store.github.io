@@ -52,7 +52,6 @@ var customRepoLanguage = {
   'tender':'template',
   'cupcake':'template',
   'glammy':'template',
-  'rajaongkir':'laravel',
 }
 
 // Custom repo avatars. Dimensions should be 40x40
